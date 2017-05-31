@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  recorded_time: 2017-06-01 01:01:46
+  amount: 1
+
+two:
+  project_id: 1
+  recorded_time: 2017-06-01 01:01:46
+  amount: 1

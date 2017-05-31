@@ -1,0 +1,12 @@
+development: &defaults
+  adapter:  postgresql
+  host:     <%= ENV['POSTGRES_HOST'] || 'localhost' %>
+  port:     <%= ENV['POSTGRES_PORT'] || 5432 %>
+  database: project_tracker_development
+  username: postgres
+  pool:     5
+  timeout:  5000
+
+test:
+  <<: *defaults
+  database: project_tracker_test

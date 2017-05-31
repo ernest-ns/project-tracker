@@ -1,0 +1,2 @@
+class ProjectUpdate < ApplicationRecord
+end
