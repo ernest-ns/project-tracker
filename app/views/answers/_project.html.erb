@@ -1,0 +1,31 @@
+<div class="project">
+    <h3 class="page-header"><%= "#{project.company.name} - #{project.name}" %></h3>
+
+    <div class="question">
+        <em>Q: How long did a project need to get fully funded?</em>
+    </div>
+    <div class="answer">
+        <% if(project.fully_funded?)%>
+            <%= "The project took #{project.human_readable_total_time_taken} to get fully funded" %>
+        <% else %>
+            The project Is not yet fully funded.
+        <% end  %>
+
+    </div>
+
+    <div class="question">
+        <em>Q: What is the overall funding amount for a company based on the projects?</em>
+    </div>
+
+    <div class="answer">
+        <%= "The overall funding amount is: #{project.company.total_funding}" %>
+    </div>
+
+    <div class="question">
+        <em>Q: How long was a project online and open for investments?</em>
+    </div>
+    <div class="answer">
+        <%= "The project was online and open for" %>
+        <%= project.human_readable_total_time_taken%>
+    </div>
+</div>

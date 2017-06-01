@@ -1,0 +1,1 @@
+<%= line_chart ProjectUpdate.where(project_id: Project.first.id).pluck(:recorded_time, :amount) %>

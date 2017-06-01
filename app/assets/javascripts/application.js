@@ -10,6 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
+//= require tether.min.js
+//= require bootstrap-datepicker
+//= require Chart.bundle
+//= require chartkick
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
