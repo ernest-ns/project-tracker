@@ -18,7 +18,7 @@ class Project < ApplicationRecord
   end
 
   def daily_progress
-    query = "SELECT DISTINCT recorded_time, amount - LAG(amount) OVER (ORDER BY recorded_time) as progress FROM project_updates WHERE project_id = #{self.id} ORDER BY recorded_time DESC;"
+    query = "SELECT DISTINCT recorded_time, amount - LAG(amount) OVER (ORDER BY recorded_time) as progress FROM project_updates WHERE project_id = #{self.id} ORDER BY recorded_time ASC;"
     ActiveRecord::Base.connection.exec_query(query)
   end
 

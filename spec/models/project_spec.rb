@@ -40,7 +40,7 @@ describe Project do
       progress = project.daily_progress.rows
       actual_output = [progress[0][1], progress[1][1], progress[2][1]]
       expected_output = [
-        project_update_1.amount,
+        nil,
         500,
         300]
       expect(actual_output).to eql(expected_output)

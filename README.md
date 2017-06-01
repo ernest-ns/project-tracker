@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a solution for the Project Tracker Problem.
 
-Things you may want to cover:
+###Tech
+This is a rails app.
+Uses Rails 5.1.1 with Ruby 2.4.1
 
-* Ruby version
+###Data
+You can run the rake task 
+`rake seed_data:generate_data` to generate the seed data.
 
-* System dependencies
+###Output
+If you visit `localhost:300` you must see the solution.
 
-* Configuration
+###Screenshot
+Here is a screenshot from my dev machine.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Screenshot](Screenshot.png "Screenshot")
