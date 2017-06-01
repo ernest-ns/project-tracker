@@ -32,4 +32,18 @@ describe Project do
       expect(project.time_taken_so_far).to eql((project_update_2.recorded_time - project_update_1.recorded_time).to_i)
     end
   end
+
+  describe "#daily_progress" do
+    it "return the progress between each day" do
+      project_update_2 = FactoryGirl.create(:project_update, {project_id: project.id, amount: project_update_1.amount + 500, recorded_time: Time.now + 1.day})
+      project_update_3 = FactoryGirl.create(:project_update, {project_id: project.id, amount: project_update_2.amount + 300, recorded_time: Time.now + 2.day})
+      progress = project.daily_progress.rows
+      actual_output = [progress[0][1], progress[1][1], progress[2][1]]
+      expected_output = [
+        project_update_1.amount,
+        500,
+        300]
+      expect(actual_output).to eql(expected_output)
+    end
+  end
 end
